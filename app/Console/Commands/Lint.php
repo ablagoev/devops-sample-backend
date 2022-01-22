@@ -35,6 +35,6 @@ class Lint extends Command
             echo $data;
         }
 
-        return 0;
+        return $process->getExitCode();
     }
 }

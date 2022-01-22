@@ -3,7 +3,9 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HealthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VersionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/users/{user}/activity', [UserController::class, 'activity']);
 });
+
+Route::get('/health', [HealthController::class, 'index']);
+Route::get('/version', [VersionController::class, 'index']);

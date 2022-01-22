@@ -23,6 +23,11 @@ The project's configuration is done through environment files. Refer to the .env
 - DB_PASSWORD (the password used for connecting to the database)
 - APP_ENV (testing for running tests, production for running in a production environment, local for development)
 - APP_KEY (base64 encoded random string of 32 characters, php artisan key:generate can be used to create a new key)
+- APP_NAME the name of the app, used for logs
+- APP_URL the url under which the app runs
+- FRONTEND_URL the url of the frontnend, should incude http + the port if it is different than 80/443
+- SESSION_DRIVER should be set to "cookie" at the moment
+- SESSION_DOMAIN the cookie domain for the session, for example .devops.com
 
 ## Artisan
 
